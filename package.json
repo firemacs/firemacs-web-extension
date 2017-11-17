@@ -1,0 +1,18 @@
+{
+    "scripts": {
+        "postinstall": "mkdir -p ./dist/",
+        "test": "mocha -r babel-register test/**/*.spec.js",
+        "start": "webpack --config .webpack.config.dev.js",
+        "build": "webpack --config .webpack.config.build.js",
+        "clean": "rm -rf ./dist/*"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.26.0",
+        "chai": "^4.1.2",
+        "mocha": "^4.0.1",
+        "webpack": "^3.8.1"
+    }
+}
