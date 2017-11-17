@@ -5,8 +5,8 @@ module.exports = {
     devtool: 'inline-cheap-module-source-map',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'firemacs.js'
+        path: path.resolve(__dirname, 'dist/js'),
+        filename: 'background.js'
     },
     module: {
         rules: [

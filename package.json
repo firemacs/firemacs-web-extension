@@ -1,10 +1,11 @@
 {
+    "name": "firemacs-quantum",
+    "version": "0.0.1",
     "scripts": {
-        "postinstall": "mkdir -p ./dist/",
         "test": "mocha -r babel-register test/**/*.spec.js",
-        "start": "webpack --config .webpack.config.dev.js",
-        "build": "webpack --config .webpack.config.build.js",
-        "clean": "rm -rf ./dist/*"
+        "start": "env BUILD_ENV=DEV bash bin/build-package.sh",
+        "build": "env BUILD_ENV=RELEASE bash bin/build-package.sh",
+        "clean": "rm -rf ./dist/* && mkdir -p dist/assets && mkdir -p dist/js"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -14,5 +15,30 @@
         "chai": "^4.1.2",
         "mocha": "^4.0.1",
         "webpack": "^3.8.1"
-    }
+    },
+    "description": "...",
+    "license": "SEE LICENSE IN LICENSE",
+    "homepage": "...",
+    "repository": {
+        "type": "git",
+        "url": "..."
+    },
+    "bugs": {
+        "url": "..."
+    },
+    "author": {
+        "name": "Aaron Miller",
+        "email": "me@aaron-miller.me",
+        "url": "https://aaron-m.com"
+    },
+    "contributors": [
+        {
+            "name": "Ben Rudgers"
+        },
+        {
+            "name": "Aaron Miller",
+            "email": "me@aaron-miller.me",
+            "url": "https://aaron-m.com"
+        }
+    ]
 }

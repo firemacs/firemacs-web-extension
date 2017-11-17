@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Firemacs Quantum",
+    "version": "",
+
+    "browser_action": {
+        "default_icon": "assets/icon32.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "clipboardRead",
+        "clipboardWrite",
+        "tabs",
+        "storage"
+    ],
+
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    }
+}
