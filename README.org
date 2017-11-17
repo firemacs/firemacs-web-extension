@@ -1,0 +1,34 @@
+* Firemacs Refired
+
+Bringing the functionality of [[https://addons.mozilla.org/en-US/firefox/addon/firemacs/][Firemacs]] to Firefox Quantum, one piece at a time.
+
+*If you want to install and use the add-on*: We're still working on getting it to a point where it's usable. Once we publish version 1 on addons.mozilla.org, we'll link to it here. Sorry for the wait, but watch this space! It won't be long.
+
+*If you want to help develop the add-on*: You're in the right place! Read on.
+
+** Feature roadmap
+- Right now: Text editing with default Emacs/Firemacs keybinds
+- Next: The ability to configure keybinds to taste
+- After that: More things
+- Eventually: Feature parity with Firemacs Classic
+  - (But it'll be a while, because not all of the necessary APIs actually exist yet.)
+- Sometime: Find out if this works in Chrome and maybe fix it if it doesn't
+
+** TBA: Detailed descriptions and explanations and &c.
+
+** For now, the tl;dr: version:
+
+(This assumes familiarity with modern Javascript development practices, and with the Web Extensions API and development process. Documentation and orientation links to come.)
+
+- Modern JS: ES2017, Babel + Webpack, Mocha + Chai.
+- Github Flow with forks and review. Squash and merge.
+- Development prereqs:
+  - Node 6 or better; Node 4 might work but no one has yet reported results.
+  - Firefox 57 or better. (Or a decently modern Chrome.)
+- Quickstart:
+  - Pull down a working copy.
+  - `npm install`
+  - `npm start`
+  - Wait a few seconds for the Webpack watcher to start. You now have the addon built in `dist/`, including the background script bundle. It'll automatically rebuild when you make changes in `src/`. (Manifest and asset changes don't trigger a rebuild yet. They will soon.)
+  - Visit `about:debugging` in Firefox. Load `dist/manifest.json` as a temporary addon. Right now its only observable behaviors are debug console output and the addition of a browser action - there will be more soon.
+    - (Or do whatever Chrome's equivalent is.)
