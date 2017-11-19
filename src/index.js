@@ -1,6 +1,7 @@
-import constants from './constants';
 import Storage from './storage';
-import logger from './logger';
+import Keymap from './keymap';
+import constants from './lib/constants';
+import logger from './lib/logger';
 
 function initialize([ store ]) {
     let activeKeymap = null;
@@ -16,11 +17,11 @@ function initialize([ store ]) {
                 return store.set('keymap', constants.defaultKeymap);
             };
         })
-        .then((keymap) => {
-            logger.info('Activating keymap', keymap);
-            return (activeKeymap = keymap);
+        .then((keymapDef) => {
+            logger.info('Activating keymap', keymapDef);
+            return (activeKeymap = new Keymap(keymapDef));
         })
-    // Any other initialization would happen here
+        // Any other initialization would happen here
         .then(() => logger.info('Firemacs is good to go!'))
         .catch(err => logger.error(err));
 };

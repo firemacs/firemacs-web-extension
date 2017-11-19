@@ -1,4 +1,5 @@
 {
     "esversion": 6,
-    "-W032": false
+    "-W032": false,
+    "-W014": false
 }

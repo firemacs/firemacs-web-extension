@@ -2,7 +2,7 @@
     "name": "firemacs-quantum",
     "version": "0.0.1",
     "scripts": {
-        "test": "mocha -r babel-register test/**/*.spec.js",
+        "test": "mocha -r babel-register test/*.spec.js test/**/*.spec.js",
         "start": "env BUILD_ENV=DEV bash bin/build-package.sh",
         "build": "env BUILD_ENV=RELEASE bash bin/build-package.sh",
         "clean": "rm -rf ./dist/* && mkdir -p dist/assets && mkdir -p dist/js"
