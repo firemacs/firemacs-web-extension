@@ -1,7 +1,7 @@
 import Storage from './storage';
 import Keymap from './keymap';
-import constants from './lib/constants';
-import logger from './lib/logger';
+import constants from '../lib/constants';
+import logger from '../lib/logger';
 
 function initialize([ store ]) {
     let activeKeymap = null;

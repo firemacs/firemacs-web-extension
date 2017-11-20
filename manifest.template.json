@@ -19,5 +19,12 @@
         "scripts": [
             "js/background.js"
         ]
-    }
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "match_about_blank": true,
+        "js": ["js/content.js"]
+    }]
 }
